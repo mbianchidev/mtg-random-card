@@ -279,7 +279,15 @@ You can also add a loader instead if you want, since you might take a while to l
 
 5. Make sure that when you switch between cards, the old card gets subsituted by the placeholder or loader, and then the new card is shown.
 
--- todo --
-6. Add the setName and set in parentesis [e.g. Wilds of Eldrain (WoE)] to the card information.
+6. make this url always HTTPS
+
+ cardImage.src = card.imageUrl;
+
+7. Add the setName and set in parentesis [e.g. Wilds of Eldrain (WoE)] to the card information.
 Add rarity to the card information.
 Also add legality and rulings to the card information.
+
+8. Resize the card to be always shown in a good shape (screenshot provided)
+
+-- todo --
+

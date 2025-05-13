@@ -193,8 +193,10 @@ h2 {
     flex: 0 0 40%;
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     min-height: 350px;
+    max-height: 500px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -230,11 +232,15 @@ h2 {
 
 #card-image {
     max-width: 100%;
+    max-height: 100%;
+    width: auto;
     height: auto;
+    object-fit: contain;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5), 0 0 10px rgba(248, 177, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
     z-index: 2;
+    aspect-ratio: 63/88; /* Standard MTG card aspect ratio */
 }
 
 #card-image:hover {
@@ -363,6 +369,121 @@ h2 {
     border-radius: 6px;
     backdrop-filter: blur(1px);
     border-bottom: 1px solid rgba(248, 177, 0, 0.2);
+    margin-bottom: 0.8rem;
+}
+
+.card-legality, .card-rulings {
+    background: rgba(26, 26, 46, 0.4);
+    padding: 0.8rem;
+    border-radius: 6px;
+    backdrop-filter: blur(1px);
+    border-bottom: 1px solid rgba(248, 177, 0, 0.2);
+    margin-bottom: 0.8rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.section-header h4 {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.toggle-btn {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: 1px solid rgba(248, 177, 0, 0.3);
+    border-radius: 4px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+    background: #4a2a6e;
+    box-shadow: 0 0 5px var(--glow-color);
+}
+
+.collapsible-content {
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color) var(--primary-color);
+    padding-right: 0.5rem;
+}
+
+.collapsible-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.collapsible-content::-webkit-scrollbar-track {
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+.collapsible-content::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 3px;
+}
+
+.legality-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+    border-bottom: 1px dotted rgba(248, 177, 0, 0.15);
+}
+
+.legality-item:last-child {
+    border-bottom: none;
+}
+
+.format {
+    font-weight: bold;
+}
+
+.legal {
+    color: #4caf50;
+}
+
+.not-legal {
+    color: #f44336;
+}
+
+.restricted {
+    color: #ff9800;
+}
+
+.banned {
+    color: #9c27b0;
+}
+
+.ruling {
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px dotted rgba(248, 177, 0, 0.15);
+}
+
+.ruling:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.ruling-date {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.ruling-text {
+    line-height: 1.4;
 }
 
 #card-flavor {
@@ -592,11 +713,60 @@ footer a:hover::after {
         width: 100%;
     }
     
+    .card-image-container {
+        min-height: 300px;
+        max-height: 400px;
+        margin-bottom: 1rem;
+    }
+    
+    #card-image {
+        max-height: 400px;
+        max-width: 288px; /* Maintaining the aspect ratio */
+        margin: 0 auto;
+    }
+    
     .card-frame {
         padding: 1.5rem;
     }
     
     h1::before, h1::after {
         display: none;
+    }
+    
+    .card-info {
+        padding: 0;
+    }
+    
+    #card-name {
+        font-size: 1.5rem;
+    }
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+    .card-frame {
+        padding: 1rem;
+    }
+    
+    .card-image-container {
+        min-height: 250px;
+        max-height: 350px;
+    }
+    
+    #card-image {
+        max-height: 350px;
+        max-width: 252px;
+    }
+    
+    #card-name {
+        font-size: 1.3rem;
+    }
+    
+    .card-type-mana {
+        font-size: 0.9rem;
+    }
+    
+    .card-text-container {
+        padding: 0.8rem;
     }
 }
