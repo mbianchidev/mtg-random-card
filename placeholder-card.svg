@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="265" height="370" viewBox="0 0 265 370" fill="none">
+  <rect x="5" y="5" width="255" height="360" rx="12" ry="12" fill="#2a2a3a" stroke="#f8b100" stroke-width="5"/>
+  <rect x="20" y="20" width="225" height="330" rx="8" ry="8" fill="#1a1a2e" stroke="#f8b10080" stroke-width="2" stroke-dasharray="5,5"/>
+  <circle cx="132" cy="150" r="60" fill="#371e5480" stroke="#f8b10050" stroke-width="3"/>
+  <text x="132" y="155" font-family="Cinzel, serif" font-size="18" fill="#f8b100" text-anchor="middle">Loading Card</text>
+  <text x="132" y="180" font-family="Lato, sans-serif" font-size="12" fill="#e9e9e9" text-anchor="middle">Summoning Magic...</text>
+  <path d="M132 50 L142 70 L165 70 L145 85 L155 110 L132 95 L109 110 L119 85 L99 70 L122 70 Z" fill="#f8b10030" stroke="#f8b100" stroke-width="1"/>
+  <path d="M132 250 L142 270 L165 270 L145 285 L155 310 L132 295 L109 310 L119 285 L99 270 L122 270 Z" fill="#f8b10030" stroke="#f8b100" stroke-width="1"/>
+</svg>

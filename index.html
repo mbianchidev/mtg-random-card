@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTG Random Card Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Magic: The Gathering</h1>
+            <h2>Random Card Explorer</h2>
+        </header>
+        
+        <main>
+            <div class="card-container">
+                <div class="card-frame">
+                    <div id="loading" class="loading">
+                        <div class="spinner"></div>
+                        <p>Summoning card...</p>
+                    </div>
+                    <div id="card-display" class="hidden">
+                        <div class="card-image-container">
+                            <img id="card-image" src="" alt="MTG Card">
+                        </div>
+                        <div class="card-info">
+                            <h3 id="card-name"></h3>
+                            <div class="card-type-mana">
+                                <p id="card-type"></p>
+                                <p id="card-mana"></p>
+                            </div>
+                            <div class="card-text-container">
+                                <p id="card-text"></p>
+                            </div>
+                            <div class="card-stats">
+                                <p id="card-flavor"></p>
+                                <p id="card-artist"></p>
+                                <p id="card-power-toughness"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="error-message" class="error hidden">
+                        <p>Failed to summon a card. Please try again.</p>
+                    </div>
+                </div>
+                
+                <button id="new-card-btn" class="glow-button">Summon New Card</button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Powered by the <a href="https://magicthegathering.io/" target="_blank">Magic: The Gathering API</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
