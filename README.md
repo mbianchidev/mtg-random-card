@@ -27,7 +27,7 @@ The application generates a random card ID between 1 and 90870 and fetches card 
 - HTML5
 - CSS3 (with animations and modern effects)
 - JavaScript (ES6+)
-- Magic: The Gathering API (https://magicthegathering.io/)
+- Magic: The Gathering API (https://magicthegathering.io/) - [docs](https://docs.magicthegathering.io/)
 
 ## Getting Started
 
